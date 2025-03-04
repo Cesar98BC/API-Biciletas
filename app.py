@@ -6,9 +6,9 @@ import requests
 app = Flask(__name__)
 CORS(app) ## To allow direct AJAX calls
 
-@app.route('/employee', methods=['GET'])
+@app.route('/datos', methods=['GET'])
 def home():
-    r = requests.get('https://github.com/topics/exercisedb-api')
+    r = requests.get('https://api.citybik.es/v2/networks')
 
     return r.json()
 
